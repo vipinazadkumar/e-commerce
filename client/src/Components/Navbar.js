@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 
-export default function Navbar({basket}) {
+
+export default function Navbar() {
+
+  const [{basket}] = useStateValue();
+const navigate = useNavigate();
   return (
     <Container>
       <Inner>
@@ -24,9 +30,9 @@ export default function Navbar({basket}) {
             <p>return & <br/> Order</p>
             {/* <p>Order</p> */}
           </NavButton>
-          <BasketBotton>
+          <BasketBotton onClick={()=> navigate('/checkout')}>
             <img src="./cart.png" alt="" />
-            <p>{basket.length}</p>
+            <p>{basket?.length}</p>
           </BasketBotton>
         </RightContainer>
       </Inner>

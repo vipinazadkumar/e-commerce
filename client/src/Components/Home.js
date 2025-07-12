@@ -13,40 +13,35 @@ export default function Home({ basket, setBasket }) {
       </Banner>
       <Main>
         <Card
-          basket={basket}
-          setBasket={setBasket}
+          id ={1}
           image={"https://m.media-amazon.com/images/I/71Wq67q-4VL._SL1500_.jpg"}
           price={50000}
           rating={5}
           title={"Apple AirPods Max Wireless Over-Ear Headphones"}
         />
         <Card
-          basket={basket}
-          setBasket={setBasket}
+           id ={2}
           image={"https://m.media-amazon.com/images/I/61oCISLE+PL._SL1500_.jpg"}
           price={19000}
           rating={4.5}
           title={"Apple AirPods Max Wireless Over-Ear Headphones"}
         />
         <Card
-          basket={basket}
-          setBasket={setBasket}
+          id ={3}
           image={"https://m.media-amazon.com/images/I/7199EhD4w8L._SX522_.jpg"}
           price={1600}
           rating={4}
           title={"Apple AirPods Max Wireless Over-Ear Headphones"}
         />
         <Card
-          basket={basket}
-          setBasket={setBasket}
+          id ={4}
           image={"https://m.media-amazon.com/images/I/51aXvjzcukL._SL1500_.jpg"}
           price={29990}
           rating={4.5}
           title={"Apple AirPods Max Wireless Over-Ear Headphones"}
         />
          <Card
-          basket={basket}
-          setBasket={setBasket}
+          id ={5}
           image={"https://m.media-amazon.com/images/I/61dgl2srHDL.jpg"}
           price={9999}
           rating={4.5}

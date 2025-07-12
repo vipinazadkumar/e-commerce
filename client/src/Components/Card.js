@@ -1,12 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import Rating from "@mui/material/Rating";
+import { useStateValue } from "../StateProvider";
 
-export default function Card({basket, setBasket,image,title, price,rating}) {
+export default function Card({id,image,title, price,rating}) {
  
-  const addToBasket = () =>{
-     setBasket([...basket,{image,title,price,rating}])
-  }
+  const [{basket},dispatch] = useStateValue();
+
+  console.log("basket >>>",basket);
+  
+  const addToBasket =(e)=>{
+    e.preventDefault();
+
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item:(
+        id,
+        title,
+        price,
+        image,
+        rating   
+      ),
+    });
+  };
    
   return (
     <Container>
